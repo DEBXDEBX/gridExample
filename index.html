@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="This is my website description" />
+    <meta name="keywords" content="web development, web design" />
+
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
+    <!-- My CSS File -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
+    <title>My Grid Guide</title>
+  </head>
+  <body>
+    <h1>grid A</h1>
+    <div id="gridA">
+      <div class="gridAItem">1</div>
+      <div class="gridAItem">2</div>
+      <div class="gridAItem">3</div>
+      <div class="gridAItem">4</div>
+      <div class="gridAItem">5</div>
+      <div class="gridAItem">6</div>
+      <div class="gridAItem">7</div>
+      <div class="gridAItem">8</div>
+      <div class="gridAItem">9</div>
+      <div class="gridAItem">10</div>
+    </div>
+
+    <pre>
+
+
+#gridA {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100px 50px 50px 100px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  /* justify-items: stretch;
+  align-items: stretch; */
+}
+
+.gridAItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gridA div:nth-child(1) {
+  grid-column: span 3;
+}
+#gridA div:nth-child(2) {
+  grid-column: span 3;
+}
+#gridA div:nth-child(3) {
+  grid-column: span 3;
+}
+#gridA div:nth-child(4) {
+  grid-column: span 3;
+}
+#gridA div:nth-child(5) {
+  grid-column: span 4;
+}
+#gridA div:nth-child(6) {
+  grid-column: span 4;
+}
+#gridA div:nth-child(7) {
+  grid-column: span 4;
+}
+#gridA div:nth-child(8) {
+  grid-column: span 6;
+}
+#gridA div:nth-child(9) {
+  grid-column: span 6;
+}
+#gridA div:nth-child(10) {
+  grid-column: span 12;
+}
+    </pre>
+    <h1>grid B</h1>
+    <div id="gridBContainer">
+      <div id="gridB">
+        <div class="gridBItem">1</div>
+        <div class="gridBItem">2</div>
+        <div class="gridBItem">3</div>
+        <div class="gridBItem">4</div>
+        <div class="gridBItem">5</div>
+        <div class="gridBItem">6</div>
+        <div class="gridBItem">7</div>
+        <div class="gridBItem">8</div>
+        <div class="gridBItem">9</div>
+        <div class="gridBItem">10</div>
+        <div class="gridBItem">11</div>
+        <div class="gridBItem">12</div>
+        <div class="gridBItem">13</div>
+        <div class="gridBItem">14</div>
+        <div class="gridBItem">15</div>
+        <div class="gridBItem">16</div>
+        <div class="gridBItem">17</div>
+        <div class="gridBItem">18</div>
+        <div class="gridBItem">19</div>
+        <div class="gridBItem">20</div>
+        <div class="gridBItem">21</div>
+        <div class="gridBItem">22</div>
+        <div class="gridBItem">23</div>
+        <div class="gridBItem">24</div>
+        <div class="gridBItem">25</div>
+        <div class="gridBItem">26</div>
+        <div class="gridBItem">27</div>
+        <div class="gridBItem">28</div>
+        <div class="gridBItem">29</div>
+        <div class="gridBItem">30</div>
+        <div class="gridBItem">31</div>
+        <div class="gridBItem">32</div>
+      </div>
+    </div>
+
+    <pre>
+#gridBContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gridB {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 100px 50px 50px 100px 100px 50px 50px 100px;
+  grid-template-rows: 100px 50px 50px 100px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.gridBItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  #gridB {
+    grid-template-columns: 50px 25px 25px 50px 50px 25px 25px 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #gridB {
+    grid-template-columns: 20px 10px 10px 20px 20px 10px 10px 20px;
+  }
+}
+    </pre>
+
+    <h1>grid C</h1>
+
+    <div id="gridC">
+      <div class="gridCItem">1</div>
+      <div class="gridCItem">2</div>
+      <div class="gridCItem">3</div>
+      <div class="gridCItem">4</div>
+      <div class="gridCItem">5</div>
+      <div class="gridCItem">6</div>
+      <div class="gridCItem">7</div>
+      <div class="gridCItem">8</div>
+      <div class="gridCItem">9</div>
+      <div class="gridCItem">10</div>
+      <div class="gridCItem">11</div>
+      <div class="gridCItem">12</div>
+      <div class="gridCItem">13</div>
+      <div class="gridCItem">14</div>
+      <div class="gridCItem">15</div>
+      <div class="gridCItem">16</div>
+      <div class="gridCItem">17</div>
+      <div class="gridCItem">18</div>
+      <div class="gridCItem">19</div>
+      <div class="gridCItem">20</div>
+      <div class="gridCItem">21</div>
+      <div class="gridCItem">22</div>
+      <div class="gridCItem">23</div>
+      <div class="gridCItem">24</div>
+      <div class="gridCItem">25</div>
+      <div class="gridCItem">26</div>
+      <div class="gridCItem">27</div>
+      <div class="gridCItem">28</div>
+      <div class="gridCItem">29</div>
+      <div class="gridCItem">30</div>
+      <div class="gridCItem">31</div>
+      <div class="gridCItem">32</div>
+    </div>
+
+    <pre>
+#gridC {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
+  grid-template-rows: 100px 50px 50px 100px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.gridCItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+    </pre>
+
+    <h1>grid D</h1>
+
+    <div id="gridD">
+      <div class="gridDItem">1</div>
+      <div class="gridDItem">2</div>
+      <div class="gridDItem">3</div>
+      <div class="gridDItem">4</div>
+      <div class="gridDItem">5</div>
+      <div class="gridDItem">6</div>
+      <div class="gridDItem">7</div>
+      <div class="gridDItem">8</div>
+      <div class="gridDItem">9</div>
+      <div class="gridDItem">10</div>
+      <div class="gridDItem">11</div>
+      <div class="gridDItem">12</div>
+      <div class="gridDItem">13</div>
+      <div class="gridDItem">14</div>
+      <div class="gridDItem">15</div>
+      <div class="gridDItem">16</div>
+      <div class="gridDItem">17</div>
+      <div class="gridDItem">18</div>
+      <div class="gridDItem">19</div>
+      <div class="gridDItem">20</div>
+      <div class="gridDItem">21</div>
+      <div class="gridDItem">22</div>
+      <div class="gridDItem">23</div>
+      <div class="gridDItem">24</div>
+      <div class="gridDItem">25</div>
+      <div class="gridDItem">26</div>
+      <div class="gridDItem">27</div>
+      <div class="gridDItem">28</div>
+      <div class="gridDItem">29</div>
+      <div class="gridDItem">30</div>
+      <div class="gridDItem">31</div>
+      <div class="gridDItem">32</div>
+    </div>
+
+    <pre>
+#gridD {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
+  grid-template-rows: 100px 50px 50px 100px 100px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-auto-rows: 50px;
+}
+
+.gridDItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gridD div:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 9;
+}
+#gridD div:nth-child(2) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+#gridD div:nth-child(3) {
+  grid-column-start: 2;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+#gridD div:nth-child(4) {
+  grid-column-start: 8;
+  grid-column-end: 9;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+#gridD div:nth-child(6) {
+  grid-column-start: 1;
+  grid-column-end: 9;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+    </pre>
+    <!-- My JavaScript File -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
+</html>

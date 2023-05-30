@@ -1,0 +1,183 @@
+/* Reset */
+* {
+  /* padding will not add to the ACTUALLY WIDTH OF THE BOX */
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+/* Main Styling */
+html,
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+}
+a {
+  text-decoration: none;
+}
+
+/* rem = ?px / RootPx        ==>32px /16rootpx == 2 rem */
+/* Create Variables */
+:root {
+  --primary-color: #00f;
+}
+/* use Variables */
+h1 {
+  color: var(--primary-color);
+  text-shadow: 1px 1px black;
+  text-align: center;
+  margin-top: 0.625rem;
+}
+
+/* grid A ######################################## */
+
+#gridA {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100px 50px 50px 100px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  /* justify-items: stretch;
+  align-items: stretch; */
+}
+
+.gridAItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#gridA div:nth-child(1) {
+  grid-column: span 3;
+}
+#gridA div:nth-child(2) {
+  grid-column: span 3;
+}
+#gridA div:nth-child(3) {
+  grid-column: span 3;
+}
+#gridA div:nth-child(4) {
+  grid-column: span 3;
+}
+#gridA div:nth-child(5) {
+  grid-column: span 4;
+}
+#gridA div:nth-child(6) {
+  grid-column: span 4;
+}
+#gridA div:nth-child(7) {
+  grid-column: span 4;
+}
+#gridA div:nth-child(8) {
+  grid-column: span 6;
+}
+#gridA div:nth-child(9) {
+  grid-column: span 6;
+}
+#gridA div:nth-child(10) {
+  grid-column: span 12;
+}
+/* grid B ######################################## */
+#gridBContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#gridB {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 100px 50px 50px 100px 100px 50px 50px 100px;
+  grid-template-rows: 100px 50px 50px 100px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.gridBItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  #gridB {
+    grid-template-columns: 50px 25px 25px 50px 50px 25px 25px 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #gridB {
+    grid-template-columns: 20px 10px 10px 20px 20px 10px 10px 20px;
+  }
+}
+/* grid C ######################################## */
+
+#gridC {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
+  grid-template-rows: 100px 50px 50px 100px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.gridCItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* grid D ######################################## */
+
+#gridD {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
+  grid-template-rows: 100px 50px 50px 100px 100px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-auto-rows: 50px;
+}
+
+.gridDItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#gridD div:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 9;
+}
+#gridD div:nth-child(2) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+
+#gridD div:nth-child(3) {
+  grid-column-start: 2;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+#gridD div:nth-child(4) {
+  grid-column-start: 8;
+  grid-column-end: 9;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+#gridD div:nth-child(6) {
+  grid-column-start: 1;
+  grid-column-end: 9;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+pre {
+  margin-left: 3rem;
+}
